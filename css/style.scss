@@ -14,6 +14,13 @@ button{
     height: 8vh;
     font-family: 'Dunbar Text', sans-serif;
 }
+@media only screen and (max-width: 860px) {
+    button{
+        min-width: 125px;
+        height: 50px;
+        padding: 1vh 2vw;
+    }
+}
 
 body{
     font-size: 20px;
@@ -49,7 +56,119 @@ body{
                     }
                 }
             }
+            .picto_nav{
+                display: none;
+            }
         }
     }
+}
 
+
+@media only screen and (max-width: 860px) {
+    body{
+        font-size: 17px;
+        header{
+            .nav{
+                nav{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: 0.4s all ease-in-out 0.25s;
+                    ul{
+                        flex-direction: column;
+                        gap: 3vh;
+                        li{
+                            font-size: 0px;
+                            transition: 0.4s all ease-in-out;
+                        }
+                    }
+                }
+                .burgerActive{
+                    border-bottom: 2px solid #F16F51;
+                    background-color: #000000;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 50vh;
+                    padding: 15vh 15vw 0;
+                    transition: 0.4s all ease-in-out;
+                    ul{
+                        li{
+                            font-size: 1.4em;
+                            transition: 0.4s all ease-in-out 0.25s;
+                        }
+                    }
+                }
+                .picto_nav{ 
+                    z-index: 50;
+                    display: flex;
+                    position: absolute;
+                    left: 50vw;
+                    transform: translateX(-50%);
+                    width: 35px;
+                    height: 35px;
+                    cursor: pointer;
+                    .line{
+                        position: absolute; 
+                        right: 0; 
+                        height: 3px; 
+                        &:nth-child(1){ 
+                            top: 0; 
+                            width: 100%;
+                            background-color: #F16F51;
+                            transition: 1s all ease-in-out;
+                        }
+                        &:nth-child(2){ 
+                            top: 50%; 
+                            margin-top: -1px; 
+                            width: 100%;
+                            background-color: #F16F51;
+                            transition: 1s all ease-in-out;
+                        }
+                        &:nth-child(3){ 
+                            bottom: 0;
+                            margin-top: -1px; 
+                            width: 100%;
+                            background-color: #F16F51;
+                            transition: 1s all ease-in-out;
+                        }
+                    }
+                }
+                .burgerClose{
+                    z-index: 50;
+                    .line:nth-child(1){
+                        transform: rotate(-130deg);
+                        height: 2px;
+                        width: 100%;
+                        display: block;
+                        top: 50%;
+                        position: absolute;
+                        transition: 1s all ease-in-out;
+                    }
+                    .line:nth-child(2){
+                        display: block;
+                        width: 0;
+                        transition: 0.4s all ease-in-out;
+                    }
+                    .line:nth-child(3){
+                        transform: rotate(130deg);
+                        height: 2px;
+                        width: 100%;
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        transition: 1s all ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
+
+h1{
+    font-family: "lust-sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #ffffff;
 }
