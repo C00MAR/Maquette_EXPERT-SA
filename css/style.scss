@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Dunbar Text', sans-serif;
 }
 
 button{
@@ -13,6 +14,13 @@ button{
     color: #ffffff;
     height: 8vh;
     font-family: 'Dunbar Text', sans-serif;
+    transition: 0.2s ease-in-out;
+    max-width: 15vw;
+    &:hover{
+        transition: 0.2s ease-in-out;
+        background-color: #F16F51;
+        border: #F16F51 2px solid;
+    }
 }
 @media only screen and (max-width: 860px) {
     button{
@@ -22,10 +30,32 @@ button{
     }
 }
 
+h1, h2{
+    font-family: "lust-sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.1em;
+}
+
+h1{
+    color: #F16F51;
+}
+
+h2{
+    color: #ffffff;
+}
+
+p{
+    font-family: 'Dunbar Text', sans-serif;
+    font-size: 0.9em;
+    color: #ffffff;
+}
+
 body{
     font-size: 20px;
     background-color: #000000;
     header{
+        height: 18vh;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -50,14 +80,52 @@ body{
                         a{
                             text-decoration: none;
                             color: #ffffff;
+                            transition: 0.2s ease-in-out;
                             font-family: 'Dunbar Text', sans-serif;
                             font-size: 0.9em;
+                            &:hover{
+                                transition: 0.2s ease-in-out;
+                                color: #F16F51;
+                            }
                         }
                     }
                 }
             }
             .picto_nav{
                 display: none;
+            }
+        }
+    }
+    .hero_banner{
+        display: flex;
+        height: 82vh;
+        width: 100vw;
+        align-items: center;
+        .cta_box{
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            padding: 0 3vw;
+            width: 50vw;
+            p{
+                position: relative;
+                top: 3vh;
+            }
+            button{
+                position: relative;
+                top: 9vh;
+            }
+        }
+        .img_cta{
+            width: 50vw;
+            display: flex;
+            justify-content: center;
+            img{
+                filter: saturate(0);
+                transition: 0.2s ease-in-out;
+            }
+            img:hover{
+                filter: saturate(1);
             }
         }
     }
@@ -68,6 +136,7 @@ body{
     body{
         font-size: 17px;
         header{
+            padding: 3vh 7vw;
             .nav{
                 nav{
                     position: absolute;
@@ -163,12 +232,31 @@ body{
                 }
             }
         }
+        .hero_banner{
+            flex-direction: column;
+            .cta_box{
+                width: 100vw;
+                padding: 5vh 7vw;
+                p{
+                    top: 2vh;
+                }
+                button{
+                    top: 3vh;
+                }
+            }
+            .img_cta{
+                z-index: -50;
+                position: relative;
+                top: -40vh;
+                width: 100vw;
+                img{
+                    max-width: 100vw;
+                    filter: blur(15px) saturate(0) opacity(0.7);
+                }
+                img:hover{
+                    filter: blur(15px) saturate(1);
+                }
+            }
+        }
     }
-}
-
-h1{
-    font-family: "lust-sans", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    color: #ffffff;
 }
