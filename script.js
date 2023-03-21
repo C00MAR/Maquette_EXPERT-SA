@@ -4,3 +4,8 @@ function OpenBurger() {
 }
 
 document.getElementById("burger_btn").addEventListener("click", OpenBurger);
+
+window.addEventListener('scroll', () => {
+    var scrollpercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+    document.getElementById('slider').style.marginLeft = -(scrollpercentage * 100) + 'vw';
+})
