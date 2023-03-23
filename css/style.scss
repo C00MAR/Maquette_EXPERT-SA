@@ -202,7 +202,7 @@ body{
             display: flex;
             align-items: center;
             gap: 80px;
-            height: 50vh;
+            height: 55vh;
             div{
                 width: 25vw;
                 height: 30vh;
@@ -224,13 +224,13 @@ body{
                 }
                 p{
                     transition: 0.3s all ease-in-out;
-                    color: #ffffff;
+                    color: transparent;
                     font-size: 0.8em;
                     margin-top: 2vh;
                 }
                 img{
                     transition: 0.3s all ease-in-out;
-                    transform: translate(3vh, -10vh);
+                    transform: translate(3vh, -12vh);
                 }
                 &:hover{
                     h4{
@@ -483,7 +483,7 @@ body{
             flex-direction: column;
             .cta_box{
                 width: 100vw;
-                padding: 5vh 7vw;
+                padding: 10vh 7vw;
                 p{
                     top: 2vh;
                 }
@@ -514,6 +514,62 @@ body{
             h3{
                 font-size: 1.1em;
                 min-width: 106vw;
+            }
+        }
+        .cabinet_section{
+            .img_cta{
+                display: none;
+            }
+        }
+        .solution_section{
+            height: 230vh;
+            .text_solution{
+                width: 90vw !important;
+                h2{
+                    width: 80vw !important;
+                }
+            }
+            .box_solution{
+                margin: 8vh 0;
+                flex-direction: column;
+                width: 90vw !important;
+                gap: 100px;
+                div{
+                    width: 80vw;
+                }
+            }
+            .devis_box{
+                margin-top: 70vh;
+                width: 80vw;
+                h2{
+                    font-size: 1.8em;
+                }
+                h2, button{
+                    z-index: 10;
+                }
+                img{
+                    z-index: 5;
+                }
+            }
+        }
+        footer{
+            flex-direction: column;
+            width: 100vw;
+            height: 120vh;
+            align-items: center;
+            justify-content: space-evenly;
+            .info{
+                width: 100vw;
+            }
+            .newsletter{
+                padding: 0 0;
+            }
+            .credit{
+                font-size: 0.6em;
+                &::before{
+                    width: 15px;
+                    height: 15px;
+                }
             }
         }
     }
